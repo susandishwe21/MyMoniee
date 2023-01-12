@@ -54,8 +54,19 @@ class SpendScreen extends StatelessWidget {
                     children: [
                       CircleAvatar(
                         radius: 20,
-                        backgroundColor:
-                            e.id == '1' ? color2.withOpacity(0.1) : Colors.red,
+                        backgroundColor: e.id == '1'
+                            ? color2.withOpacity(0.2)
+                            : e.id == '2'
+                                ? Colors.blue.withOpacity(0.2)
+                                : e.id == '3'
+                                    ? color1.withOpacity(0.2)
+                                    : e.id == '4'
+                                        ? Colors.amber.withOpacity(0.2)
+                                        : e.id == '5'
+                                            ? Colors.cyan.withOpacity(0.2)
+                                            : e.id == '6'
+                                                ? color3.withOpacity(0.2)
+                                                : Colors.red,
                         child: Image.asset(e.image),
                       ),
                       const SizedBox(
