@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:mymoniee/views/utils/global.dart';
 import 'package:mymoniee/views/utils/values.dart';
 import '../utils/super_scaffold.dart';
+import 'spend_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -198,40 +199,45 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           const Spacer(),
-          Container(
-            width: Get.width * 0.4,
-            height: Get.height * 0.19,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.1),
-                  blurRadius: 10,
-                  spreadRadius: 0.5,
-                )
-              ],
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CircleAvatar(
-                  radius: 35,
-                  backgroundColor: color3.withOpacity(0.2),
-                  child: Image.asset('assets/images/spend.png'),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  'Spend',
-                  style: TextStyle(
-                    color: color3,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w600,
+          GestureDetector(
+            onTap: () {
+              Get.to(() => const SpendScreen());
+            },
+            child: Container(
+              width: Get.width * 0.4,
+              height: Get.height * 0.19,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.1),
+                    blurRadius: 10,
+                    spreadRadius: 0.5,
+                  )
+                ],
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircleAvatar(
+                    radius: 35,
+                    backgroundColor: color3.withOpacity(0.2),
+                    child: Image.asset('assets/images/spend.png'),
                   ),
-                )
-              ],
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    'Spend',
+                    style: TextStyle(
+                      color: color3,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  )
+                ],
+              ),
             ),
           )
         ],

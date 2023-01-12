@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
+import 'package:mymoniee/controllers/spend_controller.dart';
 import 'package:mymoniee/views/screens/home_screen.dart';
 
 import 'views/screens/splash_screen.dart';
@@ -14,6 +16,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    Get.put(SpendController());
     return GetMaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
