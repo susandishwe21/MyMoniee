@@ -6,6 +6,8 @@ import 'package:mymoniee/controllers/spend_controller.dart';
 import 'package:mymoniee/views/utils/super_scaffold.dart';
 import 'package:mymoniee/views/utils/values.dart';
 
+import '../widgets/appbar_widget.dart';
+
 class SpendScreen extends StatelessWidget {
   const SpendScreen({super.key});
 
@@ -15,7 +17,20 @@ class SpendScreen extends StatelessWidget {
       color: Colors.white,
       child: Scaffold(
         body: Container(
-          child: buildSpendWidget(),
+          child: Column(
+            children: [
+              AppBarWidget(
+                title: 'Spend',
+                onPressed: () {
+                  Get.back();
+                },
+                colors: color3,
+              ),
+              Expanded(
+                child: buildSpendWidget(),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -38,14 +53,14 @@ class SpendScreen extends StatelessWidget {
                   width: Get.width * 0.06,
                   height: 30,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(
-                      12,
-                    ),
-                    boxShadow: const [
+                    borderRadius: BorderRadius.circular(10),
+                    color: const Color(0xffFFFFFF),
+                    boxShadow: [
                       BoxShadow(
-                        color: Colors.white,
-                        blurRadius: 1,
-                        spreadRadius: 5,
+                        color: const Color(0xff606060).withOpacity(0.1),
+                        offset: const Offset(3, 5),
+                        // blurRadius: 1,
+                        // spreadRadius: 5,
                       )
                     ],
                   ),

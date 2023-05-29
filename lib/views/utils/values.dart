@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 
+double screenWidth = 0;
+double screenHeight = 0;
+
 Color color1 = const Color(0xff9D39DB);
 Color color2 = const Color(0xff29D39A);
 Color color3 = const Color(0xffFF2E00);
