@@ -6,10 +6,10 @@ import 'package:mymoniee/views/utils/super_scaffold.dart';
 import 'package:mymoniee/views/utils/values.dart';
 
 class AppBarWidget extends StatelessWidget {
-  String title;
-  VoidCallback onPressed;
-  Color colors;
-  AppBarWidget({
+  final String title;
+  final VoidCallback onPressed;
+  final Color colors;
+  const AppBarWidget({
     super.key,
     required this.title,
     required this.onPressed,
@@ -21,7 +21,7 @@ class AppBarWidget extends StatelessWidget {
     return SuperScaffold(
       color: Colors.white,
       child: Container(
-        width: screenWidth,
+        width: Get.width,
         height: 50,
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Row(

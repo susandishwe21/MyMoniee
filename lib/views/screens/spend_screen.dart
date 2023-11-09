@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:mymoniee/controllers/spend_controller.dart';
 import 'package:mymoniee/views/utils/super_scaffold.dart';
 import 'package:mymoniee/views/utils/values.dart';
+import 'package:svg_flutter/svg.dart';
 
 import '../widgets/appbar_widget.dart';
 
@@ -58,9 +57,8 @@ class SpendScreen extends StatelessWidget {
                     boxShadow: [
                       BoxShadow(
                         color: const Color(0xff606060).withOpacity(0.1),
-                        offset: const Offset(3, 5),
-                        // blurRadius: 1,
-                        // spreadRadius: 5,
+                        offset: const Offset(2, 2),
+                        blurRadius: 5,
                       )
                     ],
                   ),
@@ -69,25 +67,20 @@ class SpendScreen extends StatelessWidget {
                     children: [
                       CircleAvatar(
                         radius: 20,
-                        backgroundColor: e.id == '1'
-                            ? color2.withOpacity(0.2)
-                            : e.id == '2'
-                                ? Colors.blue.withOpacity(0.2)
-                                : e.id == '3'
-                                    ? color1.withOpacity(0.2)
-                                    : e.id == '4'
-                                        ? Colors.amber.withOpacity(0.2)
-                                        : e.id == '5'
-                                            ? Colors.cyan.withOpacity(0.2)
-                                            : e.id == '6'
-                                                ? color3.withOpacity(0.2)
-                                                : Colors.red,
-                        child: Image.asset(e.image),
+                        backgroundColor: e.color.withOpacity(0.24),
+                        child: SvgPicture.asset(e.image),
                       ),
                       const SizedBox(
                         height: 10,
                       ),
-                      Text(e.title),
+                      Text(
+                        e.title,
+                        style: TextStyle(
+                          color: e.color,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 12,
+                        ),
+                      ),
                     ],
                   ),
                 ),

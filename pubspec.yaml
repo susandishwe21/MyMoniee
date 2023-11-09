@@ -39,6 +39,7 @@ dependencies:
   get: ^4.6.5
   focus_detector: ^2.0.1
   responsive_sizer: ^3.2.0
+  svg_flutter: ^0.0.1
 
 dev_dependencies:
   flutter_test:
