@@ -43,10 +43,12 @@ class AppBarWidget extends StatelessWidget {
                 ),
               ),
             ),
+            const Spacer(),
             Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  "MyMonie",
+                  "MyMoniee",
                   style: TextStyle(
                     color: color1,
                     fontWeight: FontWeight.w700,
@@ -59,7 +61,7 @@ class AppBarWidget extends StatelessWidget {
                 )
               ],
             ),
-            const SizedBox(width: 10),
+            const Spacer(),
             Text(
               title,
               style: TextStyle(
