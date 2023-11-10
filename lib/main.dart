@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mymoniee/controllers/spend_controller.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'views/screens/splash_screen.dart';
 
 void main() {
@@ -18,14 +19,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(SpendController());
 
-    return GetMaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        fontFamily: 'Poppins',
-      ),
-      home: const SplashScreen(),
-    );
+    return ResponsiveSizer(builder: (context, orientation, screenType) {
+      return GetMaterialApp(
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+          fontFamily: 'Poppins',
+        ),
+        home: const SplashScreen(),
+      );
+    });
   }
 }

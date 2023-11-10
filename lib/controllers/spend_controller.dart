@@ -5,6 +5,7 @@ import 'package:mymoniee/models/spend.dart';
 import '../views/utils/values.dart';
 
 class SpendController extends GetxController {
+  TextEditingController txtSpendController = TextEditingController();
   List<Spend> spendList = [
     Spend(
         id: '1', title: 'Food', image: 'assets/images/food.svg', color: color2),
@@ -44,4 +45,9 @@ class SpendController extends GetxController {
         image: 'assets/images/plus.svg',
         color: const Color(0xffA4A4A4)),
   ];
+
+  addSpendAmount(String value) {
+    txtSpendController.text = value;
+    update();
+  }
 }
