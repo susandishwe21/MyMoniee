@@ -34,7 +34,7 @@ class SpendScreenDetailScreen extends StatelessWidget {
                   height: 45,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
-                    color: color.withOpacity(0.24),
+                    color: color1.withOpacity(0.15),
                   ),
                   alignment: Alignment.center,
                   child: Transform.translate(
