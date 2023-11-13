@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mymoniee/views/utils/global.dart';
 import 'package:mymoniee/views/utils/values.dart';
 import '../utils/super_scaffold.dart';
 import 'spend_screen.dart';
@@ -75,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                   BoxShadow(
                     color: Colors.grey.withOpacity(0.1),
                     spreadRadius: 0.5,
-                    offset: Offset(15, 15),
+                    offset: const Offset(15, 15),
                   ),
                 ],
               ),
@@ -286,9 +285,9 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(
                   width: 10,
                 ),
-                Column(
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Text(
                       'Income',
                       style: TextStyle(
